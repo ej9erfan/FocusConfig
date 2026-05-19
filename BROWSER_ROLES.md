@@ -31,8 +31,7 @@ Edge has the deepest native integration with the Microsoft ecosystem. Single sig
 **Assigned work:**
 - LLM chat interfaces (non-corporate, non-government)
 - Personal accounts and services
-- Volunteer work for mutual aid organizations
-- Recovery support group coordination
+- Volunteer work and community organizations
 
 **Why Chrome:**
 Chrome's profile system makes it easy to maintain clean separation between personal identities. It's also the most widely supported browser for consumer web apps, which is where personal and volunteer tools tend to live.
@@ -73,6 +72,6 @@ Firefox also has the strongest extension ecosystem for engineering workflows, an
 
 ## The Underlying Principle
 
-Each browser is a *mode*, not just a container. Opening Edge means you're in work mode. Opening Chrome means you're in personal or exploration mode. Opening Firefox means you're in engineering mode. The visual distinctiveness of each browser's new tab page (enforced by `BrowserCleanup.ps1`) reinforces this — your environment gives you a constant low-cost signal about what context you're operating in, without requiring any conscious effort to check.
+Each browser is a *mode*, not just a container. Opening Edge means you're in work mode. Opening Chrome means you're in personal or exploration mode. Opening Firefox means you're in engineering mode. The visual distinctiveness of each browser's new tab page (enforced by `BrowserIntent.ps1`) reinforces this — your environment gives you a constant low-cost signal about what context you're operating in, without requiring any conscious effort to check.
 
 This is sometimes called *environmental design* in ADHD management literature: structuring your physical and digital environment so that the right behavior is the path of least resistance, rather than relying on willpower or reminders.

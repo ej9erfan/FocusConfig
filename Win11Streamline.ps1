@@ -7,21 +7,19 @@
 #  the ambient peripheral vision of an ADHD engineer.
 #
 #  WHAT THIS DOES:
-#  1. Taskbar      — left-align icons + Start button
-#  2. Right-click  — full options immediately, no "Show more"
-#  3. Start menu   — kill ads and Recommended items feed
-#  4. OneDrive     — disable autostart (does not uninstall)
-#  5. Xbox Game Bar— disable background hotkey hijacking
-#  6. Taskbar Search — disable Bing, route to default browser (Kagi via extension)
+#  1. Taskbar      -- left-align icons + Start button
+#  2. Right-click  -- full options immediately, no "Show more"
+#  3. Start menu   -- kill ads and Recommended items feed
+#  4. OneDrive     -- disable autostart (does not uninstall)
+#  5. Xbox Game Bar-- disable background hotkey hijacking
+#  6. Taskbar Search -- disable Bing, route to default browser (Kagi via extension)
 #
 #  Run as Administrator (script self-elevates).
 #  Log out and back in after running for full effect.
 # ============================================================
 
 # -- Self-elevate if not already admin --
-if (-not ([Security.Principal.WindowsPrincipal]
-    [Security.Principal.WindowsIdentity]::GetCurrent()
-    ).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Host "Relaunching as Administrator..." -ForegroundColor Yellow
     Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
     exit

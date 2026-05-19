@@ -43,6 +43,24 @@ Windows updates occasionally break registry keys or reset policy values. If some
 
 ## How to Contribute
 
+## First-Time Setup -- ExecutionPolicy
+
+If you hit an error like `is not digitally signed` or `UnauthorizedAccess` when running any script, your PowerShell execution policy is blocking unsigned local scripts. Two commands fix it permanently:
+
+```powershell
+# Allow local scripts to run (your user account only, not system-wide)
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Unblock the downloaded files (Windows flags anything from the internet)
+Get-ChildItem .\*.ps1 | Unblock-File
+```
+
+Run these once from a PowerShell terminal in the FocusConfig folder, then run scripts normally. You won't need to repeat this.
+
+**Why not code-sign the scripts?** Commercial signing certs cost money and add friction for every contributor. `RemoteSigned` is the standard policy for developer machines and the right tradeoff for an open source tool.
+
+---
+
 ### For registry/policy findings (no coding required)
 Open an issue with:
 - The registry path or policy key
